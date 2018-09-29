@@ -3,7 +3,7 @@
 Replace the basic textarea with a nice Ace code editor (from CDN), with basic code completion.
 
 - Copy files in the `plugins/` folder.
-- Modify your index.php to include the plugin, ex.:
+- Modify your `index.php` to include the plugin, ex.:
 
 ```php
 <?php
