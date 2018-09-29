@@ -29,12 +29,13 @@ class AdminerAce
         // ACE editor CDN
         $conf = [
             "cdn" => "//cdnjs.cloudflare.com/ajax/libs/ace",
-            "version" => "1.4.0",
+            "version" => "1.4.1",
         ];
         $base = implode("/", $conf) . "/";
         $js = [
             "ace.js",
             "mode-mysql.js",
+            "ext-language_tools.js",
             "snippets/mysql.js",
             "theme-{$this->theme}.js",
         ];

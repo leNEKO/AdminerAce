@@ -1,9 +1,10 @@
 var options = {
   fontFamily: "Fira code",
-  fontSize: "15",
+  fontSize: "16px",
   displayIndentGuides: true,
   enableBasicAutocompletion: true,
-  enableLiveAutocompletion: true
+  enableLiveAutocompletion: true,
+  showPrintMargin: false
 };
 
 $(function() {
@@ -35,7 +36,7 @@ $(function() {
     editor.setTheme("ace/theme/###theme###");
 
     // copy back to textarea on form submit...
-    textarea.closest("form").submit(function() {
+    textarea.closest("form").on("keyup", function() {
       textarea.val(editor.getSession().getValue());
     });
   });
