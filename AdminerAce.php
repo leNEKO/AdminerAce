@@ -15,6 +15,7 @@ class AdminerAce
     public function __construct($theme = "vibrant_ink")
     {
         $this->theme = $theme;
+        $this->fs = "20px";
     }
 
     public function name()
@@ -57,7 +58,7 @@ class AdminerAce
             return $that->{$m[1]};
         };
 
-        $tpl = file_get_contents(__DIR__ . "/" . $file);
+        $tpl = file_get_contents(__DIR__ . "/AdminerAceData/" . $file);
         $data = preg_replace_callback("/###(.*)###/", $callback, $tpl);
         return $data;
     }
